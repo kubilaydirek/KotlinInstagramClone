@@ -1,5 +1,6 @@
 package com.example.instagramclone.fragment
 
+import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -25,6 +26,18 @@ class LoginPageFragment : Fragment() {
         binding.registerTextButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginPageFragment_to_registerFragment)
         }
+
+        binding.loginButton.setOnClickListener {
+            if (binding.loginPasswordTextField.text.toString().isEmpty()) {
+                binding.loginPasswordTextField.setBackgroundResource(R.drawable.plaint_text_border_red)
+                binding.loginPasswordEmptyError.visibility = View.VISIBLE
+            }
+            if (binding.loginUsernameTextField.text.toString().isEmpty()) {
+                binding.loginUsernameTextField.setBackgroundResource(R.drawable.plaint_text_border_red)
+                binding.loginUsernameEmptyError.visibility = View.VISIBLE
+            }
+        }
+
     }
 
 }

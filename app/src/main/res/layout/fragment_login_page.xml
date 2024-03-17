@@ -19,14 +19,14 @@
         android:textAlignment="center"
         android:textSize="35sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/registerUsernameTextField"
+        app:layout_constraintBottom_toTopOf="@+id/loginUsernameTextField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:inputType="textPassword"
-        android:id="@+id/registerEpostaTextField"
+        android:id="@+id/loginPasswordTextField"
         android:layout_width="254dp"
         android:layout_height="50dp"
         android:layout_marginStart="79dp"
@@ -34,17 +34,16 @@
         android:layout_marginEnd="78dp"
         android:background="@drawable/plaint_text_border"
         android:hint="@string/parola"
-        android:paddingStart="10dp"
+        android:padding="10dp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerUsernameTextField" />
+        app:layout_constraintTop_toBottomOf="@+id/loginUsernameTextField" />
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/loginButton"
         android:layout_width="254dp"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="79dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="78dp"
@@ -52,10 +51,10 @@
         android:text="Giriş Yap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerEpostaTextField" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordTextField" />
 
     <EditText
-        android:id="@+id/registerUsernameTextField"
+        android:id="@+id/loginUsernameTextField"
         android:layout_width="254dp"
         android:layout_height="50dp"
         android:layout_marginStart="79dp"
@@ -85,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -120,6 +119,37 @@
             tools:layout_editor_absoluteY="503dp" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/loginPasswordEmptyError"
+        android:layout_width="234dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="11dp"
+        android:text="Parola Alanı Boş bırakılamaz."
+        android:visibility="invisible"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordTextField" />
+
+    <TextView
+        android:id="@+id/loginUsernameEmptyError"
+        android:layout_width="234dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="10dp"
+        android:text="Kullanıcı Adı Boş Bırakılamaz"
+        android:visibility="invisible"
+        android:textColor="#FF0202"
+        app:layout_constraintBottom_toTopOf="@+id/loginPasswordTextField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginUsernameTextField" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
