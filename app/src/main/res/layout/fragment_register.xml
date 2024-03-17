@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.RegisterFragment">
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="78dp"
+        android:height="50dp"
+        android:text="@string/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerPasswordTextField" />
+
+    <EditText
+
+        android:id="@+id/registerEpostaTextField"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="78dp"
+        android:background="@drawable/plaint_text_border"
+        android:hint="@string/eposta"
+        android:padding="10dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerUsernameTextField" />
+
+    <EditText
+        android:id="@+id/registerPasswordTextField"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="78dp"
+        android:background="@drawable/plaint_text_border"
+        android:hint="@string/parola"
+        android:padding="10dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerEpostaTextField" />
+
+    <EditText
+        android:id="@+id/registerUsernameTextField"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="78dp"
+        android:background="@drawable/plaint_text_border"
+        android:hint="@string/username"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="183dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="114dp"
+        android:fontFamily="@font/bad_script"
+        android:text="@string/register"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/registerBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="347dp"
+        android:layout_marginBottom="600dp"
+        android:backgroundTint="#00FFFFFF"
+        android:importantForAccessibility="no"
+        android:src="@drawable/back_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

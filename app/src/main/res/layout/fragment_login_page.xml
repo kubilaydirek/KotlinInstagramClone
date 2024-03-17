@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.LoginPageFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="183dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/bad_script"
+        android:text="@string/instagram"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/registerUsernameTextField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/registerEpostaTextField"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="78dp"
+        android:background="@drawable/plaint_text_border"
+        android:hint="@string/parola"
+        android:paddingStart="10dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerUsernameTextField" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="78dp"
+        android:height="50dp"
+        android:text="Giriş Yap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerEpostaTextField" />
+
+    <EditText
+        android:id="@+id/registerUsernameTextField"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="78dp"
+        android:background="@drawable/plaint_text_border"
+        android:hint="@string/kullanici_adi_veya_eposta"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="RtlSymmetry" />
+
+
+    <TextView
+        android:id="@+id/resetPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:text="@string/reset_password"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="77dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetPasswordButton">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="Kayıt olmak için "
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="503dp" />
+
+
+        <TextView
+            android:id="@+id/registerTextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="@string/tiklayin"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="503dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

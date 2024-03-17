@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">InstagramClone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kullanici_adi_veya_eposta">Kullanıcı Adı veya Eposta</string>
+    <string name="parola">Parola</string>
+    <string name="instagram">Instagram</string>
+    <string name="kayit_olmak_icin">Kayıt olmak için </string>
+    <string name="tiklayin">Tıklayın</string>
+    <string name="reset_password">Parolamı Sıfırla</string>
+    <string name="register">Kayıt Ol</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="eposta">E-posta</string>
+    <string name="giris_yap">Giriş Yap</string>
+</resources>
