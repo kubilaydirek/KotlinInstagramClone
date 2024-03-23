@@ -1,5 +1,5 @@
 package com.example.instagramclone.utils
 
-object Constants {
+object Utils {
     const val baseUrl = "https://identitytoolkit.googleapis.com/"
 }

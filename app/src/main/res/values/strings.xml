@@ -12,4 +12,9 @@
     <string name="username">Kullanıcı Adı</string>
     <string name="eposta">E-posta</string>
     <string name="giris_yap">Giriş Yap</string>
+    <string name="dogrulama_kodu_gonder">Doğrulama Kodu Gönder</string>
+    <string name="anasayfa">Anasayfa</string>
+    <string name="ara">Ara</string>
+    <string name="ekle">Ekle</string>
+    <string name="profil">Profil</string>
 </resources>

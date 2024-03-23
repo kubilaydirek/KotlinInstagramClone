@@ -11,13 +11,12 @@ import com.example.instagramclone.R
 import com.example.instagramclone.databinding.FragmentRegisterBinding
 import com.example.instagramclone.model.RegisterModel
 import com.example.instagramclone.servis.InstagramService
-import com.example.instagramclone.utils.Constants
+import com.example.instagramclone.utils.Utils
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 class RegisterFragment : Fragment() {
     private lateinit var binding: FragmentRegisterBinding
@@ -54,7 +53,7 @@ class RegisterFragment : Fragment() {
     }
 
     private fun register() {
-        val retrofit = Retrofit.Builder().baseUrl(Constants.baseUrl)
+        val retrofit = Retrofit.Builder().baseUrl(Utils.baseUrl)
             .addConverterFactory(GsonConverterFactory.create()).build()
         val service = retrofit.create(InstagramService::class.java)
         val body = mapOf(
