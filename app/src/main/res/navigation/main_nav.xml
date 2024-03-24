@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.instagramclone.fragment.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" />
+    <fragment
+        android:id="@+id/addPostPageFragment"
+        android:name="com.example.instagramclone.fragment.AddPostPageFragment"
+        android:label="fragment_add_post_page"
+        tools:layout="@layout/fragment_add_post_page" />
+    <fragment
+        android:id="@+id/profilePageFragment"
+        android:name="com.example.instagramclone.fragment.ProfilePageFragment"
+        android:label="fragment_profile_page"
+        tools:layout="@layout/fragment_profile_page" />
+    <fragment
+        android:id="@+id/searchPageFragment"
+        android:name="com.example.instagramclone.fragment.SearchPageFragment"
+        android:label="fragment_search_page"
+        tools:layout="@layout/fragment_search_page" />
+</navigation>

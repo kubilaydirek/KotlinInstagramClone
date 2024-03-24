@@ -2,23 +2,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/homePageFragment"
         android:icon="@drawable/home_icon"
         android:title="@string/anasayfa" />
 
     <item
 
-        android:id="@+id/navigation_search"
+        android:id="@+id/searchPageFragment"
         android:icon="@drawable/search_icon"
         android:title="@string/ara" />
 
     <item
-        android:id="@+id/navigation_add"
+        android:id="@+id/addPostPageFragment"
         android:icon="@drawable/add_icon"
         android:title="@string/ekle" />
 
     <item
-        android:id="@+id/navigation_profile"
+        android:id="@+id/profilePageFragment"
         android:icon="@drawable/profile_icon"
         android:title="@string/profil" />
 </menu>

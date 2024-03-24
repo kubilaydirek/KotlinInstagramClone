@@ -8,5 +8,6 @@ object RetrofitClient {
             .baseUrl(Utils.baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+
     }
 }        
