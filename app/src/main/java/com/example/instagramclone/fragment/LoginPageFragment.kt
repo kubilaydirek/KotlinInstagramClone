@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.instagramclone.R
 import com.example.instagramclone.databinding.FragmentLoginPageBinding
@@ -17,6 +18,7 @@ import com.example.instagramclone.model.LoginModel
 import com.example.instagramclone.servis.InstagramService
 import com.example.instagramclone.utils.Utils
 import com.example.instagramclone.view.HomePageActivity
+import com.example.instagramclone.view_model.LoginViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,6 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class LoginPageFragment : Fragment() {
     private lateinit var binding: FragmentLoginPageBinding
 
+    private lateinit var loginViewModel: LoginViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -39,6 +42,8 @@ class LoginPageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        loginViewModel = ViewModelProvider(this)[LoginViewModel::class.java]
+
         binding.registerTextButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginPageFragment_to_registerFragment)
         }
@@ -60,7 +65,20 @@ class LoginPageFragment : Fragment() {
                     binding.loginUsernameEmptyError.visibility = View.VISIBLE
                 }
             } else {
-                login()
+                loginViewModel.login(binding.loginUsernameTextField.text.toString(),
+                    binding.loginPasswordTextField.text.toString(),
+                    {
+                        val intent = Intent(context, HomePageActivity::class.java)
+                        startActivity(intent)
+                        activity?.finish();
+                    },
+                    {
+                        Toast.makeText(
+                            context,
+                            "Kullanıcı adınızı veya şifrenizi kontrol ediniz.",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    })
             }
 
 
@@ -75,41 +93,6 @@ class LoginPageFragment : Fragment() {
             binding.loginPasswordEmptyError.visibility = View.GONE
         }
 
-    }
-
-    private fun login() {
-        val retrofit = Retrofit.Builder().baseUrl(Utils.baseUrl)
-            .addConverterFactory(GsonConverterFactory.create()).build()
-        val service = retrofit.create(InstagramService::class.java)
-        val body = mapOf(
-            "email" to binding.loginUsernameTextField.text.toString(),
-            "password" to binding.loginPasswordTextField.text.toString(),
-            "returnSecureToken" to true
-        )
-        service.login(body).enqueue(object : Callback<LoginModel> {
-            override fun onResponse(call: Call<LoginModel>, response: Response<LoginModel>) {
-                if (response.isSuccessful) {
-                    response.body()?.let {
-                        val intent = Intent(context, HomePageActivity::class.java)
-                        startActivity(intent)
-                        activity?.finish();
-                    }
-                } else if (response.code() == 400) {
-                    Toast.makeText(
-                        context,
-                        "Kullanıcı adınızı veya şifrenizi kontrol ediniz.",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-            }
-
-            override fun onFailure(call: Call<LoginModel>, t: Throwable) {
-                Log.e("Error", "login Error ", t)
-
-            }
-
-
-        })
     }
 
 
